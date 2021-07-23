@@ -4,11 +4,13 @@ export interface Hero {
 
 }
 
-const heroesData = [
+const heroesData: Hero[] = [
   { name: 'Geoff', email: "geoff@server.com" },
   { name: 'Joanna', email: "joanna@server.com" },
   { name: 'Dan', email: "dan@server.com" }
 ];
+
+let heroList: Hero[] =[];
 
 import { Component, OnInit } from '@angular/core';
 
@@ -22,10 +24,8 @@ export class HeroesComponent implements OnInit {
   email: string;
   heroList: Hero[] = heroesData;
 
-  constructor() {
-
-  }
-
+  constructor() {}
+  
   ngOnInit(): void {
   }
 
