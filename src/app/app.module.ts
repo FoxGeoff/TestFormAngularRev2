@@ -7,11 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { AddHeroComponent } from './add-hero/add-hero.component';
+import { HeroListComponent } from './hero-list/hero-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent
+    HeroesComponent,
+    AddHeroComponent,
+    HeroListComponent
   ],
   imports: [
     BrowserModule,

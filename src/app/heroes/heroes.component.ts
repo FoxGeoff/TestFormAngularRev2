@@ -19,6 +19,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeroesComponent implements OnInit {
   name: string;
   email: string;
+  // assign test data
   heroList: Hero[] = heroesData;
 
   constructor() { }
@@ -26,16 +27,15 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onAddHero() {
-    this.heroList.push({ name: this.name, email: this.email });
+  onHeroAdded(heroData: { heroName: string, heroEmail: string }) {
+    this.heroList.push({
+      name: heroData.heroName,
+      email: heroData.heroEmail
+    });
 
     // debug code
-    console.log(this.heroList);
+    console.log(`onHeroAdded():`, this.heroList);
 
   }
 
-  onCancelHero() {
-    this.name = '';
-    this.email = '';
-  }
 }

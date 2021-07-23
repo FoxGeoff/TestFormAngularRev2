@@ -1,0 +1,13 @@
+<p>hero-list works!</p>
+<!-- Heroes List-->
+<div fxLayout="row" fxLayoutGap="10px">
+  <mat-list>
+    <div mat-subheader>Hero Listing</div>
+    <mat-list-item *ngFor="let hero of heroList">
+      <mat-icon mat-list-icon>person</mat-icon>
+      <div mat-line style="color: '#7b50c7'">{{ hero.name }}</div>
+      <div mat-line>{{ hero.email }}</div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
