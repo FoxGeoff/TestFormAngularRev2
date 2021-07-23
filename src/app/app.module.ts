@@ -19,7 +19,6 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     FlexLayoutModule,
     FormsModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,33 @@
-<p>heroes works!</p>
+<div class="container" fxLayoutGap="18px">
+  <!-- Dashboard  -->
+  <p>Hero Details Form</p>
+  <form class="form">
+    <div>
+      <mat-form-field appearance="standard">
+        <mat-label>Last Name</mat-label>
+        <input matInput [(ngModel)]="newHeroName" name="HeroName" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="standard">
+        <mat-label>E-Mail</mat-label>
+        <input matInput type="email" [(ngModel)]="newEmail" name="email" />
+      </mat-form-field>
+    </div>
+  </form>
+  <button mat-raised-button color="primary">Primary</button>
+  <button mat-raised-button color="accent">Accent</button>
+  <hr />
+  <!-- Heroes List-->
+  <div fxLayout="row" fxLayoutGap="10px">
+    <mat-list>
+      <div mat-subheader>Hero Listing</div>
+      <mat-list-item>
+        <mat-icon mat-list-icon>element</mat-icon>
+        <div mat-line style="color: '#7b50c7'">{{ heroName }}</div>
+        <div mat-line>{{ heroEmail }}</div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </div>
+</div>

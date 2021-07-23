@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
+ newHeroName: string;
+ newEmail: string;
+ heroName = 'Superman';
+ heroEmail = 'super@server.com';
 
   constructor() { }
 
