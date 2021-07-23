@@ -1,3 +1,15 @@
+export interface Hero {
+  name: string;
+  email: string;
+
+}
+
+const heroesData = [
+  { name: 'Geoff', email: "geoff@server.com" },
+  { name: 'Joanna', email: "joanna@server.com" },
+  { name: 'Dan', email: "dan@server.com" }
+];
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,12 +18,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
- newHeroName: string;
- newEmail: string;
- heroName = 'Superman';
- heroEmail = 'super@server.com';
+  name: string;
+  email: string;
+  heroList: Hero[] = heroesData;
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
   }

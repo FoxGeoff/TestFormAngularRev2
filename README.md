@@ -18,3 +18,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 3. Restart server
 
 ### Task: Add prototype dashboard
+
+### Task: Add Hero class and test data

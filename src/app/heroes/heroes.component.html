@@ -1,17 +1,17 @@
 <div class="container" fxLayoutGap="18px">
   <!-- Dashboard  -->
-  <p>Hero Details Form</p>
+  <p>Heros Detail Form</p>
   <form class="form">
     <div>
       <mat-form-field appearance="standard">
         <mat-label>Last Name</mat-label>
-        <input matInput [(ngModel)]="newHeroName" name="HeroName" />
+        <input matInput [(ngModel)]="name" name="name" />
       </mat-form-field>
     </div>
     <div>
       <mat-form-field appearance="standard">
         <mat-label>E-Mail</mat-label>
-        <input matInput type="email" [(ngModel)]="newEmail" name="email" />
+        <input matInput type="email" [(ngModel)]="email" name="email" />
       </mat-form-field>
     </div>
   </form>
@@ -22,10 +22,10 @@
   <div fxLayout="row" fxLayoutGap="10px">
     <mat-list>
       <div mat-subheader>Hero Listing</div>
-      <mat-list-item>
-        <mat-icon mat-list-icon>element</mat-icon>
-        <div mat-line style="color: '#7b50c7'">{{ heroName }}</div>
-        <div mat-line>{{ heroEmail }}</div>
+      <mat-list-item *ngFor="let hero of heroList">
+        <mat-icon mat-list-icon>person</mat-icon>
+        <div mat-line style="color: '#7b50c7'">{{ hero.name }}</div>
+        <div mat-line>{{ hero.email }}</div>
       </mat-list-item>
       <mat-divider></mat-divider>
     </mat-list>
