@@ -1,7 +1,6 @@
 export interface Hero {
   name: string;
   email: string;
-
 }
 
 const heroesData: Hero[] = [
@@ -9,8 +8,6 @@ const heroesData: Hero[] = [
   { name: 'Joanna', email: "joanna@server.com" },
   { name: 'Dan', email: "dan@server.com" }
 ];
-
-let heroList: Hero[] =[];
 
 import { Component, OnInit } from '@angular/core';
 
@@ -24,9 +21,21 @@ export class HeroesComponent implements OnInit {
   email: string;
   heroList: Hero[] = heroesData;
 
-  constructor() {}
-  
+  constructor() { }
+
   ngOnInit(): void {
   }
 
+  onAddHero() {
+    this.heroList.push({ name: this.name, email: this.email });
+
+    // debug code
+    console.log(this.heroList);
+
+  }
+
+  onCancelHero() {
+    this.name = '';
+    this.email = '';
+  }
 }
