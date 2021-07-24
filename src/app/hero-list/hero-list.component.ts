@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Hero } from '../heroes/heroes.component';
 
 @Component({
@@ -7,23 +7,10 @@ import { Hero } from '../heroes/heroes.component';
   styleUrls: ['./hero-list.component.css']
 })
 export class HeroListComponent implements OnInit {
-  heroList: Hero[];
+  @Input() heroElement: Hero;
 
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  onAddHero() {
-    //this.heroList.push({ name: this.name, email: this.email });
-
-    // debug code
-    //console.log(this.heroList);
-
-  }
-
-  onCancelHero() {
-    //this.name = '';
-    //this.email = '';
   }
 }

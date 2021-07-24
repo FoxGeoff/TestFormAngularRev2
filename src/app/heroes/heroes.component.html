@@ -1,4 +1,14 @@
 <div class="container" fxLayoutGap="18px">
   <app-add-hero (heroCreated)="onHeroAdded($event)"></app-add-hero>
-  <app-hero-list></app-hero-list>
+  <!-- Heroes List -->
+  <div fxLayout="row" fxLayoutGap="10px">
+    <mat-list>
+      <div mat-subheader>Hero Listing</div>
+      <!--  Hero Element -->
+      <app-hero-list
+        *ngFor="let hero of heroList"
+        [heroElement]="hero"
+      ></app-hero-list>
+    </mat-list>
+  </div>
 </div>
